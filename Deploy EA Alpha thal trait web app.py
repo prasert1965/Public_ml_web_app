@@ -12,9 +12,9 @@ import streamlit as st
 #import AdaBoostClassifier
 
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
+pickle.load(open('EAtrained_model.sav', 'rb'))
 
-    
+
 def EA_Alpha_thal_prediction(input_data):
     
 
