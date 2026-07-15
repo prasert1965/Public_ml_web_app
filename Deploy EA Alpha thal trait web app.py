@@ -11,8 +11,8 @@ import streamlit as st
 #import LogisticRegression
 #import AdaBoostClassifier
 
-# lo ading the saved model
-#loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
+# loading the saved model
+loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
     
 def EA_Alpha_thal_prediction(input_data):
