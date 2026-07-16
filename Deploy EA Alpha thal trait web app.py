@@ -9,6 +9,7 @@ import numpy as np
 import pickle
 import streamlit as st
 #import scikit-learn
+from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import AdaBoostClassifier
