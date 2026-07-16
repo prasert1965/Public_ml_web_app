@@ -23,7 +23,7 @@ from sklearn.metrics import roc_auc_score
 #import AdaBoostClassifier
 
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model1.sav', 'rb'))
+loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
 
 
 def EA_Alpha_thal_prediction(input_data):
