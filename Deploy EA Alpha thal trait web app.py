@@ -9,6 +9,8 @@ import numpy as np
 import pickle
 import streamlit as st
 #import scikit-learn
+from pyod.utils.persistence import compat_load
+clf = compat_load('your_old_artifact.joblib')
 from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
