@@ -2,4 +2,4 @@ numpy
 pickle-mixin
 streamlit
 streamlit-option-menu
-scikit-learn==1.0.0
+scikit-learn
