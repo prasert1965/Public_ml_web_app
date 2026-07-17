@@ -1,6 +1,6 @@
-numpy == 1.24.4
-streamlit == 1.40.1
+numpy
+streamlit
 streamlit-option-menu
-scikit-learn == 1.2.2
+scikit-learn
 pyodbc
 jolib
