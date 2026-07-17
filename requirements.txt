@@ -1,4 +1,4 @@
-numpy
+numpy == 1.2.1
 streamlit
 streamlit-option-menu
 scikit-learn
