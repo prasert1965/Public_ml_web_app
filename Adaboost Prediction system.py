@@ -7,7 +7,7 @@ Created on Thu Mar 21 16:20:43 2024
 
 import numpy as np
 import pickle
-from sklearn.preprocessing import StandardScaler
+#from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 
