@@ -2,6 +2,3 @@ numpy
 streamlit
 streamlit-option-menu
 scikit-learn
-pandas
-matplotlib
-python
