@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
+loaded_model = pickle.load(open('EAtrained_model3.sav', 'rb'))
 
 
 def EA_Alpha_thal_prediction(input_data):
