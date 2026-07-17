@@ -29,9 +29,9 @@ def EA_Alpha_thal_prediction(input_data):
 
      predictions = loaded_model.predict(input_data_reshaped)
     #predictions = model.predict(input_data_reshaped)  
-    #print(predictions)
+    print(predictions)
 
-     if (predictions[0] == 0):
+     if (predictions[0] == 1):
        return 'This person is alpha thalassemia carrier'
      else:
        return 'This person is not alpha thalassemia carrier'
