@@ -9,7 +9,10 @@ import numpy as np
 import pickle
 import streamlit as st
 #from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
 
+# Fix: Notice the parenthesis () to instantiate the object
+model = LogisticRegression()  
 #scaler = StandardScaler()
 
 # loading the saved model
