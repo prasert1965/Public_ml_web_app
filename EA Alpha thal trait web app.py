@@ -8,7 +8,7 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
-import scikit-learn
+#import scikit-learn
 #import AdaBoostClassifier
 
 # lo ading the saved model
