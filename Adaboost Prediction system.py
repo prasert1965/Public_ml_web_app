@@ -13,8 +13,6 @@ from sklearn.linear_model import LogisticRegression, SGDClassifier
 # Correct: Instantiate each model inside the list setup
 loaded_model = [LogisticRegression(), SGDClassifier()] 
 
-loaded_model.fit(X_train, y_train)
-#predictions = model.predict(X_test)  # Works perfectly
 
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
