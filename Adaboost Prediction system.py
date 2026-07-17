@@ -12,7 +12,7 @@ import streamlit as st
 from sklearn.linear_model import LogisticRegression
 
 # Fix: Notice the parenthesis () to instantiate the object
-model = LogisticRegression()  
+#model = LogisticRegression()  
 #scaler = StandardScaler()
 
 # loading the saved model
@@ -27,7 +27,8 @@ def EA_Alpha_thal_prediction(input_data):
      input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
      prediction = loaded_model.predict(input_data_reshaped)
-     print(prediction)
+    #predictions = model.predict(input_data_reshaped)  
+    print(prediction)
 
      if (prediction[0] == 0):
        return 'This person is alpha thalassemia carrier'
