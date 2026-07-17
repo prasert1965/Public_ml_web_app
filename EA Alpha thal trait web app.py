@@ -20,6 +20,7 @@ loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
     
+ input_data = ([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])
 
     # changing the input_data to numpy array
      input_data_as_numpy_array = np.asarray(input_data)
@@ -60,7 +61,7 @@ def main():
     with col4:
          RDW = st.text_input('RDW (fl)')
     
-    input_data = ([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]) 
+  #  input_data = ([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]) 
    
     # code for Prediction
     diagnosis = ''
