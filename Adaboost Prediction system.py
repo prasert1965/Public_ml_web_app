@@ -9,7 +9,7 @@ import numpy as np
 import pickle
 #from sklearn.preprocessing import StandardScaler
 
-scaler = StandardScaler()
+#scaler = StandardScaler()
 
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
