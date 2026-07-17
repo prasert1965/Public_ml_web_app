@@ -9,16 +9,6 @@ import numpy as np
 import pickle
 import streamlit as st
 #import scikit-learn
-from streamlit_option_menu import option_menu
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn import metrics
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import roc_curve
-from sklearn.metrics import roc_auc_score
 #import LogisticRegression
 #import AdaBoostClassifier
 
