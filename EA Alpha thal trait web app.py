@@ -6,7 +6,7 @@ Created on Thu Mar 21 16:20:43 2024
 """
 
 import numpy as np
-#import pickle
+import pickle-mixin
 import streamlit as st
 #import LogisticRegression
 #import AdaBoostClassifier
