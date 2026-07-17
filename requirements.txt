@@ -1,5 +1,5 @@
 numpy
-streamlit
+streamlit == 1.40.1
 streamlit-option-menu
 scikit-learn
 pyodbc
