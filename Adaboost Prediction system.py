@@ -8,12 +8,13 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
-#from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression, SGDClassifier
 
-# Fix: Notice the parenthesis () to instantiate the object
-loaded_model = LogisticRegression()  
-#scaler = StandardScaler()
+# Correct: Instantiate each model inside the list setup
+loaded_model = [LogisticRegression(), SGDClassifier()] 
+
+for loaded_model in models:
+    loaded_model.fit(X_train, y_train)
 
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
