@@ -12,7 +12,7 @@ import streamlit as st
 from sklearn.linear_model import LogisticRegression
 
 # Fix: Notice the parenthesis () to instantiate the object
-#model = LogisticRegression()  
+loaded_model = LogisticRegression()  
 #scaler = StandardScaler()
 
 # loading the saved model
