@@ -60,7 +60,8 @@ def main():
     with col4:
          RDW = st.text_input('RDW (fl)')
     
-    
+    input_data = ([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]) 
+   
     # code for Prediction
     diagnosis = ''
     
