@@ -8,11 +8,11 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
-#import scikit-learn
+#import LogisticRegression
 #import AdaBoostClassifier
 
 # lo ading the saved model
-loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
+loaded_model = pickle.load(open('D:/WorkAdaboost/EAtrained_model.sav', 'rb'))
 
 
 
@@ -20,7 +20,6 @@ loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
     
- input_data = ([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])
 
     # changing the input_data to numpy array
      input_data_as_numpy_array = np.asarray(input_data)
@@ -61,8 +60,7 @@ def main():
     with col4:
          RDW = st.text_input('RDW (fl)')
     
-  #  input_data = ([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]) 
-   
+    
     # code for Prediction
     diagnosis = ''
     
