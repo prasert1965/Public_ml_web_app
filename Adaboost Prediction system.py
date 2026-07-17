@@ -26,11 +26,11 @@ def EA_Alpha_thal_prediction(input_data):
     # reshape the array as we are predicting for one instance
      input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-     prediction = loaded_model.predict(input_data_reshaped)
+     predictions = loaded_model.predict(input_data_reshaped)
     #predictions = model.predict(input_data_reshaped)  
-    print(prediction)
+    print(predictions)
 
-     if (prediction[0] == 0):
+     if (predictions[0] == 0):
        return 'This person is alpha thalassemia carrier'
      else:
        return 'This person is not alpha thalassemia carrier'
