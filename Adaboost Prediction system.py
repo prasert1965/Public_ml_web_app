@@ -15,7 +15,7 @@ loaded_model = [LogisticRegression(), SGDClassifier()]
 
 
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model3.sav', 'rb'))
+loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 
 def EA_Alpha_thal_prediction(input_data):
