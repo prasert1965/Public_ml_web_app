@@ -1,6 +1,6 @@
 numpy
 streamlit
 streamlit-option-menu
-scikit-learn == 1.6.1
+scikit-learn
 pyodbc
 jolib
