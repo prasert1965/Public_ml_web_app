@@ -19,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 pickle.load(open('EAtrained_model1.sav', 'rb'))
 
 
-load_model =  EA_Alpha_thal_prediction(input_data):
+loaded_model =  EA_Alpha_thal_prediction(input_data):
     
 
     # changing the input_data to numpy array
