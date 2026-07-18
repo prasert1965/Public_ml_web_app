@@ -9,15 +9,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
-# FIX: Add parentheses to instantiate the object
-loaded_model = LogisticRegression()  
-
-# Now the methods will work properly
-#loaded_model.fit(X_train, y_train)
-#prediction = loaded_model.predict(X_test) 
-# loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
-
 
 def EA_Alpha_thal_prediction(input_data):
     
