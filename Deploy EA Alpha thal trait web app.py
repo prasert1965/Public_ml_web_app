@@ -8,8 +8,7 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
-import tensorflow as keras
-from tensorflow.keras.models import load_model
+
 #import LogisticRegression
 #import AdaBoostClassifier
 
