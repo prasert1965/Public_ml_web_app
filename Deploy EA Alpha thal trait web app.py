@@ -9,7 +9,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
-loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
+loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
   
