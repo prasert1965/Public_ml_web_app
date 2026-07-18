@@ -8,7 +8,7 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
-classifiers = [SVC(), LogisticRegression(), SGDClassifier()] 
+classifiers = [ LogisticRegression(), SGDClassifier()] 
 
 # FIX: Add parentheses to instantiate the object
 loaded_model = LogisticRegression()  
