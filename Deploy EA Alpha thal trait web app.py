@@ -9,6 +9,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import seaborn as sns
+import sklearn
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import AdaBoostClassifier
