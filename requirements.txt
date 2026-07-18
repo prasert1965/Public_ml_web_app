@@ -1,5 +1,5 @@
 numpy == 2.0.2
-pabdas == 2.2.2
+pandas == 2.2.2
 streamlit
 streamlit-option-menu
 scikit-learn
