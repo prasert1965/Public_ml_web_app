@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 
 # loading the saved model
-loaded_model = pickle.load(open('D:/WorkAdaboost/EAtrained_model.sav', 'rb'))
+loaded_model = pickle.load(open(EAtrained_model3.sav', 'rb'))
 
 input_data = (30,44.2,14.5,5.41,81.7,26.8,32.8,14)
 
