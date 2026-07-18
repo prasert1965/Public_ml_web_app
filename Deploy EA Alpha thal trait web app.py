@@ -14,7 +14,7 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.linear_model import LogisticRegression
 #import LogisticRegression
 #import AdaBoostClassifier
-
+loaded_model = LogisticRegression()  
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model1.pkl', 'rb'))
 
