@@ -32,7 +32,7 @@ def EA_Alpha_thal_prediction(input_data):
     # prediction = loaded_model.predict(input_data)
     # prediction_label = [np.argmax(prediction)]
     # print(prediction_label) 
-     print(prediction)
+    # print(prediction)
 
      if (prediction[0] == 0):
        return 'This person is alpha thalassemia carrier'
