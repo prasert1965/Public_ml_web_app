@@ -14,8 +14,8 @@ from sklearn.linear_model import LogisticRegression
 loaded_model = LogisticRegression()  
 
 # Now the methods will work properly
-loaded_model.fit(X_train, y_train)
-prediction = loaded_model.predict(X_test) 
+#loaded_model.fit(X_train, y_train)
+#prediction = loaded_model.predict(X_test) 
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
 
