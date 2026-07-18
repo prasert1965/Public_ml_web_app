@@ -10,9 +10,12 @@ import pickle
 import streamlit as st
 #import LogisticRegression
 #import AdaBoostClassifier
+from pyod.utils.model_persistence import compat_load
 
+# This safely handles the missing tree fields and loads your model
+loaded_model = compat_load("EAtrained_model.sav")
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model3.sav', 'rb'))
+#loaded_model = pickle.load(open('EAtrained_model3.sav', 'rb'))
 
 
 def EA_Alpha_thal_prediction(input_data):
