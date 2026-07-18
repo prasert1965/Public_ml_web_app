@@ -12,7 +12,7 @@ import streamlit as st
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
- input_data = [AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]   
+  
 
     # changing the input_data to numpy array
      input_data_as_numpy_array = np.asarray(input_data)
@@ -52,15 +52,15 @@ def main():
          MCHC = st.text_input('MCHC (g/dl)')
     with col4:
          RDW = st.text_input('RDW (fl)')
-    input_data = [AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]
-    
+        
     # code for Prediction
     diagnosis = ''
     
     # creating a button for Prediction
     
     if st.button('Prediction result Pls. Click'):
-         diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])        
+        input_data = [AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW] 
+       diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])        
         
     st.success(diagnosis)
       
