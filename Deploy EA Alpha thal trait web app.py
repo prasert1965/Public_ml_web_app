@@ -8,9 +8,10 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
-#import scikit-learn
-#import LogisticRegression
-#import AdaBoostClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.linear_model import LogisticRegression
 
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
