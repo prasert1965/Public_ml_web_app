@@ -59,8 +59,8 @@ def main():
     # creating a button for Prediction
     
     if st.button('Prediction result Pls. Click'):
-        input_data = [AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW] 
-       diagnosis = EA_Alpha_thal_prediction(input_data)        
+         
+       diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])        
         
     st.success(diagnosis)
       
