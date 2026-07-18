@@ -12,7 +12,7 @@ import streamlit as st
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
-    
+ input_data = [AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW]   
 
     # changing the input_data to numpy array
      input_data_as_numpy_array = np.asarray(input_data)
