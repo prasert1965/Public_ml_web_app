@@ -4,20 +4,15 @@ Created on Thu Mar 21 16:20:43 2024
 
 @author: Administrator
 """
-import pandas as pd
+
 import numpy as np
 import pickle
 import streamlit as st
-#import seaborn as sns
-import sklearn
-import joblib
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn import metrics
+#import LogisticRegression
+#import AdaBoostClassifier
+
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model3.sav', 'rb'))
+pickle.load(open('EAtrained_model.sav', 'rb'))
 
 
 def EA_Alpha_thal_prediction(input_data):
@@ -27,11 +22,9 @@ def EA_Alpha_thal_prediction(input_data):
      input_data_as_numpy_array = np.asarray(input_data)
 
     # reshape the array as we are predicting for one instance
-      input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
      prediction = loaded_model.predict(input_data_reshaped)
-    # prediction_label = [np.argmax(prediction)]
-    # print(prediction_label) 
      print(prediction)
 
      if (prediction[0] == 0):
