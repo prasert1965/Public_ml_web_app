@@ -4,7 +4,7 @@ Created on Thu Mar 21 16:20:43 2024
 
 @author: Administrator
 """
-
+import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
