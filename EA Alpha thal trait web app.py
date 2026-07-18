@@ -19,9 +19,7 @@ loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
     
 
 def EA_Alpha_thal_prediction(input_data):
- val = "18,"
-# Strip the trailing comma
-clean_val = float(val.strip(","))  # Returns 18.0
+ 
     # changing the input_data to numpy array
      input_data_as_numpy_array = np.asarray(input_data)
 
