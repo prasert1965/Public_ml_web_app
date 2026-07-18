@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.linear_model import LogisticRegression
-
+from sklearn import metrics
 # loading the saved model
 loaded_model = pickle.load(open('EAtrained_model2.sav', 'rb'))
 
