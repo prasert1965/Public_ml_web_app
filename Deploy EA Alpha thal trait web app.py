@@ -16,7 +16,7 @@ from sklearn.linear_model import LogisticRegression
 #import AdaBoostClassifier
 loaded_model = LogisticRegression()  
 # loading the saved model
-loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
+loaded_model = pickle.load(open('EAtrained_model1.sav', 'rb'))
 
 
 def EA_Alpha_thal_prediction(input_data):
