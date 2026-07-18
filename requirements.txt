@@ -3,7 +3,7 @@ numpy == 2.0.2
 streamlit == 1.40.1
 streamlit-option-menu
 scikit-learn == 1.6.1
-python == 3.8.8
+python == 3.8.0
 pyodbc
 jolib
 pyod
