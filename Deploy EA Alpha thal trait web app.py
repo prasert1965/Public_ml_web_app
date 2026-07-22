@@ -64,16 +64,10 @@ def main():
        diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])        
         
     st.success(diagnosis)
-      
-    # creating a button for Print Prediction report
-    
-    if st.button('Prediction report Pls. Click'):
-    
-    st.success(diagnosis)  
-
+       
 if __name__ == '__main__':
     main() 
- 
-if st.button('Prediction report Pls. Click'):
-    
+
+# creating a button for Print Prediction report 
+  if st.button('Prediction report Pls. Click'):
     st.success()  
