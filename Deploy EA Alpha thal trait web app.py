@@ -68,6 +68,8 @@ def main():
     # creating a button for Print Prediction report
     
     if st.button('Prediction report Pls. Click'):
+    
+    st.success(diagnosis)  
 
 if __name__ == '__main__':
     main() 
