@@ -57,14 +57,11 @@ def main():
     # code for Prediction
     diagnosis = ''
     
-    # creating a button for Prediction
-  
+    # creating a button for Prediction 
         
-  if st.button('Prediction result Pls. Click'):
-         
-       diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])        
-        
-    st.success(diagnosis)
+    if st.button('Prediction result Pls. Click'):        
+       diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])               
+       st.success(diagnosis)
        
 if __name__ == '__main__':
     main() 
