@@ -53,14 +53,15 @@ def main():
          MCHC = st.text_input('MCHC (g/dl)')
     with col4:
          RDW = st.text_input('RDW (fl)')
-    
-  st.button('Print Prediction report')    
+       
     # code for Prediction
     diagnosis = ''
     
     # creating a button for Prediction
+  
+    st.button('Print Prediction report') 
     
-    if st.button('Prediction result Pls. Click'):
+  if st.button('Prediction result Pls. Click'):
          
        diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])        
         
