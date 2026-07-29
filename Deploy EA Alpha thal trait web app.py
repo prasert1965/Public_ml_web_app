@@ -97,7 +97,7 @@ st.title("Adaboost Model Prediction App")
    #  print(prediction)
 
  # if prediction == 0):
-     prediction = 'This person is alpha thalassemia carrier' # Example prediction
+prediction = 'This person is alpha thalassemia carrier' # Example prediction
  # else:
     # predictuin = 'This person is not alpha thalassemia carrier' # Example prediction
        
