@@ -81,9 +81,8 @@ def create_pdf(prediction_result):
 
 # Streamlit UI
 st.title("ML Prediction App")
-prediction = "Positive (98% confidence)"  # Example prediction
-       print(input_data_as_numpy_array)
-       print(prediction)
+prediction = input_data_as_numpy_array  # Example prediction
+       
 if st.button("Generate Report"):
   pdf_data = create_pdf(prediction)
   st.download_button(
