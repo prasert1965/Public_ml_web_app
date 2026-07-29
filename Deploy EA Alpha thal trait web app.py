@@ -8,6 +8,7 @@ Created on Thu Mar 21 16:20:43 2024
 import numpy as np
 import pickle
 import streamlit as st
+from fpdf import FPDF
 
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
