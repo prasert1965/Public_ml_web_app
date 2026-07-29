@@ -81,7 +81,7 @@ def create_pdf(prediction_result):
 
 # Streamlit UI
 st.title("ML Prediction App")
-prediction = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])   # Example prediction
+prediction = "EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])"   # Example prediction
        
 if st.button("Generate Report"):
   pdf_data = create_pdf(prediction)
