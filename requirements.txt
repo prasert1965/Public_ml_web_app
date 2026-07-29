@@ -7,3 +7,5 @@ pyodbc
 jolib
 pyod
 fpdf
+fpdf2
+matplotlib
