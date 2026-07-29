@@ -81,8 +81,7 @@ def create_pdf(prediction_result):
 
 # Streamlit UI
 st.title("Adaboost Model Prediction App")
-prediction = loaded_model.predict(input_data_reshaped)
-#prediction =  # Example prediction
+   prediction = "XXXXX"# Example prediction
        
 if st.button("Generate Report"):
   pdf_data = create_pdf(prediction)
