@@ -68,66 +68,28 @@ def main():
        
 if __name__ == '__main__':
     main() 
-# 1. Define your PDF Generator
-class PDFReport(FPDF):
-    def header(self):
-        self.set_font('Arial', 'B', 16)
-        self.cell(0, 10, 'Prediction Analysis Report', border=False, ln=True, align='C')
-        self.ln(5)
+# Function to generate PDF
+def create_pdf(prediction_result):
+  pdf = FPDF()
+  pdf.add_page()
+  pdf.set_font("Arial", size=12)
+  pdf.cell(200, 10, txt="Prediction Report", ln=1, align="C")
+  pdf.cell(
+      200, 10, txt=f"Result: {prediction_result}", ln=1, align="L"
+  )
+  return pdf.output(dest="S").encode("latin1")
 
-def generate_pdf(prediction_label, confidence, fig):
-    pdf = PDFReport()
-    pdf.add_page()
-    pdf.set_font('Arial', '', 12)
-    
-    # Add text summary
-    pdf.cell(0, 10, f"Model Prediction: {prediction_label}", ln=True)
-    pdf.cell(0, 10, f"Confidence Score: {confidence}%", ln=True)
-    pdf.ln(5)
-    
-    # Save Matplotlib figure to a temporary file and add to PDF
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmpfile:
-        fig.savefig(tmpfile.name, format="png", bbox_inches='tight')
-        # pdf.image(path, x, y, width)
-        pdf.image(tmpfile.name, x=15, y=50, w=180) 
-    
-    # Output PDF as byte string
-    return pdf.output(dest='S').dencode('latin-1')
 
-# --- Streamlit UI ---
-st.title("Prediction Dashboard")
-
-# Mock Prediction Data
-prediction = "High Risk"
-score = 88.5
-
-st.subheader("Results")
-st.write(f"**Prediction:** {prediction}")
-st.write(f"**Confidence:** {score}%")
-
-# Generate a Matplotlib Plot
-fig, ax = plt.subplots(figsize=(6, 3.5))
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-ax.plot(x, y, color='crimson', linewidth=2, label="Prediction Curve")
-ax.set_title("Forecast Probability Density")
-ax.set_xlabel("Time Step")
-ax.set_ylabel("Probability")
-ax.legend()
-ax.grid(True, linestyle="--", alpha=0.6)
-
-# Display Plot in Streamlit App
-st.pyplot(fig)
-
-# Generate PDF with Graph included
-pdf_data = generate_pdf(prediction, score, fig)
-
-# Download Button
-st.download_button(
-    label="📄 Download PDF Report (with Graph)",
-    data=pdf_data,
-    file_name="prediction_report.pdf",
-    mime="application/pdf"
-)
-
+# Streamlit UI
+st.title("Adaboost Model Prediction App")
+prediction = 'This person is not alpha thalassemia carrier' # Example prediction
+       
+if st.button("Generate Report"):
+  pdf_data = create_pdf(prediction)
+  st.download_button(
+      label="Download Report as PDF",
+      data=pdf_data,
+      file_name="prediction_report.pdf",
+      mime="application/pdf",
+  )
 
