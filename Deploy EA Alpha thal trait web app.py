@@ -66,4 +66,27 @@ def main():
 if __name__ == '__main__':
     main() 
 
+# Function to generate PDF
+def create_pdf(prediction_result):
+  pdf = FPDF()
+  pdf.add_page()
+  pdf.set_font("Arial", size=12)
+  pdf.cell(200, 10, txt="Prediction Report", ln=1, align="C")
+  pdf.cell(
+      200, 10, txt=f"Result: {prediction_result}", ln=1, align="L"
+  )
+  return pdf.output(dest="S").encode("latin1")
 
+
+# Streamlit UI
+st.title("ML Prediction App")
+prediction = "Positive (98% confidence)"  # Example prediction
+
+if st.button("Generate Report"):
+  pdf_data = create_pdf(prediction)
+  st.download_button(
+      label="Download Report as PDF",
+      data=pdf_data,
+      file_name="prediction_report.pdf",
+      mime="application/pdf",
+  )
