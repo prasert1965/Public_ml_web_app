@@ -81,7 +81,11 @@ def create_pdf(prediction_result):
 
 # Streamlit UI
 st.title("Adaboost Model Prediction App")
-prediction = 'diagnosis' # Example prediction
+if (prediction[0] == 0):
+      return 'This person is alpha thalassemia carrier'
+     else:
+       return 'This person is not alpha thalassemia carrier'
+#prediction = '[Age],diagnosis' # Example prediction
        
 if st.button("Generate Report"):
   pdf_data = create_pdf(prediction)
