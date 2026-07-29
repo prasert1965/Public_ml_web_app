@@ -97,9 +97,9 @@ def EA_Alpha_thal_prediction(input_data):
      print(prediction)
 
   if (prediction[0] == 0):
-      prediction = 'This person is alpha thalassemia carrier' # Example prediction
+      return 'This person is alpha thalassemia carrier' # Example prediction
   else:
-      prediction = 'This person is not alpha thalassemia carrier' # Example prediction
+      return 'This person is not alpha thalassemia carrier' # Example prediction
        
 if st.button("Generate Report"):
   pdf_data = create_pdf(prediction)
