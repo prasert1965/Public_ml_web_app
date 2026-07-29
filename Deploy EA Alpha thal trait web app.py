@@ -80,8 +80,8 @@ def create_pdf(prediction_result):
 
 
 # Streamlit UI
-st.title("ML Prediction App")
-prediction = diagnosis()  # Example prediction
+st.title("Adaboost Model Prediction App")
+prediction = Loaded_model  # Example prediction
        
 if st.button("Generate Report"):
   pdf_data = create_pdf(prediction)
