@@ -96,7 +96,7 @@ def EA_Alpha_thal_prediction(input_data):
      print(input_data_as_numpy_array)
      print(prediction1)
 
-    if prediction1 = '0'):
+    if prediction1 == '0'):
     prediction = 'This person is alpha thalassemia carrier' # Example prediction
     else:
     predictuin = 'This person is not alpha thalassemia carrier' # Example prediction
