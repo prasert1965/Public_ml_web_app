@@ -68,43 +68,27 @@ def main():
        
 if __name__ == '__main__':
     main() 
-st.title("Prediction Dashboard")
+# Function to generate PDF
+def create_pdf(prediction_result):
+  pdf = FPDF()
+  pdf.add_page()
+  pdf.set_font("Arial", size=12)
+  pdf.cell(200, 10, txt="Prediction Report", ln=1, align="C")
+  pdf.cell(
+      200, 10, txt=f"Result: {prediction_result}", ln=1, align="L"
+  )
+  return pdf.output(dest="S").encode("latin1")
 
-# Your Streamlit UI
-st.metric(label="Model Accuracy", value="94.2%", delta="1.2%")
-st.line_chart([10, 20, 15, 30, 50, 40])
 
-# Add CSS to customize what gets printed (e.g., hide sidebars & buttons)
-st.markdown("""
-    <style>
-    @media print {
-        /* Hide sidebar, navigation bar, and action buttons during print */
-        section[data-testid="stSidebar"],
-        header,
-        footer,
-        .stButton,
-        [data-testid="stHeader"] {
-            display: none !important;
-        }
-        /* Force full screen layout */
-        .main .block-container {
-            max-width: 100% !important;
-            padding: 0 !important;
-        }
-    }
-    </style>
-""", unsafe_unsafe_html=True)
-
-# Print Screen Button via HTML/JS
-st.components.v1.html("""
-    <button onclick="window.parent.print()" style="
-        background-color: #ff4b4b;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;">
-        ๐–จ๏ธ Print Screen to PDF
-    </button>
-""", height=60)
+# Streamlit UI
+st.title("Adaboost Model Prediction App")
+prediction = 'This person is not alpha thalassemia carrier' # Example prediction
+       
+if st.button("Generate Report"):
+  pdf_data = create_pdf(prediction)
+  st.download_button(
+      label="Download Report as PDF",
+      data=pdf_data,
+      file_name="prediction_report.pdf",
+      mime="application/pdf",
+  )
