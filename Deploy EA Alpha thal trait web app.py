@@ -92,7 +92,7 @@ def generate_pdf(prediction_label, confidence, fig):
         pdf.image(tmpfile.name, x=15, y=50, w=180) 
     
     # Output PDF as byte string
-    return pdf.output(dest='S').encode('latin-1')
+    return pdf.output(dest='S').dencode('latin-1')
 
 # --- Streamlit UI ---
 st.title("Prediction Dashboard")
