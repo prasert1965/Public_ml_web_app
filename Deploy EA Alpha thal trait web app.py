@@ -78,7 +78,7 @@ components.html("""
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        font-size: 16px;">
+        font-size: 14px;">
         🖨️ พิมพ์รายงาน (Print / Save as PDF)
     </button>
 """, height=60)
