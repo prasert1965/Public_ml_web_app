@@ -72,7 +72,7 @@ st.title("รายงานผลการทำนาย")
 st.write("ผลการวิเคราะห์ข้อมูล...")
 
 # สร้างปุ่มพิมพ์หน้าเว็บ
-st.markdown("""
+components.html("""
     <button onclick="window.parent.print()" style="
         background-color: #4CAF50;
         color: white;
@@ -83,4 +83,4 @@ st.markdown("""
         font-size: 16px;">
         🖨️ พิมพ์รายงาน (Print / Save as PDF)
     </button>
-""", unsafe_allow_html=True)
+""", height=60)
