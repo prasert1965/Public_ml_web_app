@@ -73,7 +73,7 @@ st.write("ผลการวิเคราะห์ข้อมูล...")
 
 # สร้างปุ่มพิมพ์หน้าเว็บ
 st.markdown("""
-    <button onclick="window.print()" style="
+    <button onclick="window.parent.print()" style="
         background-color: #4CAF50;
         color: white;
         padding: 10px 24px;
