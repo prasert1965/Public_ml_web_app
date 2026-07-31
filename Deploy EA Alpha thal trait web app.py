@@ -11,7 +11,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import tempfile
 from fpdf import FPDF
-
+import streamlit.components.v1 as components
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
