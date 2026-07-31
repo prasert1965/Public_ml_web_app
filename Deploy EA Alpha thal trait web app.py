@@ -69,8 +69,6 @@ def main():
 if __name__ == '__main__':
     main() 
 st.title("รายงานผลการทำนาย")
-st.write("ผลการวิเคราะห์ข้อมูล...")
-
 # สร้างปุ่มพิมพ์หน้าเว็บ
 components.html("""
     <button onclick="window.parent.print()" style="
