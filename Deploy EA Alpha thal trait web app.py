@@ -68,27 +68,19 @@ def main():
        
 if __name__ == '__main__':
     main() 
-# Function to generate PDF
-def create_pdf(prediction_result):
-  pdf = FPDF()
-  pdf.add_page()
-  pdf.set_font("Arial", size=12)
-  pdf.cell(200, 10, txt="Prediction Report", ln=1, align="C")
-  pdf.cell(
-      200, 10, txt=f"Result: {prediction_result}", ln=1, align="L"
-  )
-  return pdf.output(dest="S").encode("latin1")
+st.title("รายงานผลการทำนาย")
+st.write("ผลการวิเคราะห์ข้อมูล...")
 
-
-# Streamlit UI
-st.title("Adaboost Model Prediction App")
-prediction = 'This person is not alpha thalassemia carrier' # Example prediction
-       
-if st.button("Generate Report"):
-  pdf_data = create_pdf(prediction)
-  st.download_button(
-      label="Download Report as PDF",
-      data=pdf_data,
-      file_name="prediction_report.pdf",
-      mime="application/pdf",
-  )
+# สร้างปุ่มพิมพ์หน้าเว็บ
+st.markdown("""
+    <button onclick="window.print()" style="
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;">
+        🖨️ พิมพ์รายงาน (Print / Save as PDF)
+    </button>
+""", unsafe_allow_html=True)
