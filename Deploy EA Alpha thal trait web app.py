@@ -16,7 +16,8 @@ from fpdf import FPDF
 import streamlit.components.v1 as components
 from datetime import datetime
 tz_thai = pytz.timezone('Asia/Bangkok')
-current_time = datetime.datetime.now(tz_thai).strftime("%d/%m/%y time %H:%M minute.")
+now_thai = datetime.datetime.now(tz_thai)
+current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
@@ -42,7 +43,7 @@ def main():
 
     # giving a title  
     st.title('Web for prediction Alpha Thalassemia carrier')   
-    st.write(f"**Date Prediction:** {current_time}")
+    st.write(f"**Date Prediction:** {current_time_str}")
     # getting the input data from the user
     col1, col2, col3, col4 = st.columns(4)
     with col1:
