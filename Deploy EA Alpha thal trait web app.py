@@ -13,7 +13,7 @@ import tempfile
 from fpdf import FPDF
 from datetime import datetime
 import streamlit.components.v1 as components
-curent_time = datetimr.now()
+current_time = datetimr.now()
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
