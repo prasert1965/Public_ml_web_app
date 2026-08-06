@@ -11,9 +11,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import tempfile
 from fpdf import FPDF
-from datetime import datetime
 import streamlit.components.v1 as components
-now_str = datetime.now()
+from datetime import datetime
 current_time = datetime.now()
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
