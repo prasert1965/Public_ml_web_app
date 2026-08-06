@@ -43,7 +43,7 @@ def main():
 
     # giving a title  
     st.title('Web for prediction Alpha Thalassemia carrier')   
-    st.write(f"**Date Prediction:** {current_time_str}")
+    
     # getting the input data from the user
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -79,7 +79,7 @@ def main():
           st.write('Reported by ............................ ')   
     with col3:
           st.write('Approved by ............................ ')
-
+st.write(f"**Date Prediction:** {current_time_str}")
 if __name__ == '__main__':
     main() 
 #st.title("รายงานผลการทำนาย")
