@@ -11,7 +11,9 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import tempfile
 from fpdf import FPDF
+from datetime import datetime
 import streamlit.components.v1 as components
+curent_time = datetimr.now()
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
 def EA_Alpha_thal_prediction(input_data):
@@ -69,6 +71,7 @@ def main():
     col1, col2, col3, = st.columns(3)
     with col1:
           st.write('Predicted by ..Phrae ADA ML.. ') 
+          st.write(f"**Date Prediction:** {current+time}")
     with col2:
           st.write('Reported by ............................ ')   
     with col3:
