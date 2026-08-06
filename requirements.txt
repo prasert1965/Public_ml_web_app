@@ -9,3 +9,4 @@ pyod
 fpdf
 fpdf2
 matplotlib
+pytz
