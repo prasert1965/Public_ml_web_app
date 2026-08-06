@@ -16,7 +16,7 @@ from fpdf import FPDF
 import streamlit.components.v1 as components
 from datetime import datetime
 tz_thai = pytz.timezone('Asia/Bangkok')
-now_thai = datetime.datetime.now(tz_thai)
+now_thai = datetime.now(tz_thai)
 current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
