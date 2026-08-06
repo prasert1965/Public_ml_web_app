@@ -79,7 +79,8 @@ def main():
           st.write('Reported by ............................ ')   
     with col3:
           st.write('Approved by ............................ ')
-st.write(f"**Date Prediction:** {current_time_str}")
+    st.write(f"**Date Prediction:** {current_time_str}")
+  
 if __name__ == '__main__':
     main() 
 #st.title("รายงานผลการทำนาย")
