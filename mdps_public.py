@@ -79,8 +79,7 @@ if (selected == 'Diabetes Prediction'):
           diab_diagnosis = 'The person is diabetic'
         else:
            diab_diagnosis = 'The person is not diabetic'
-        
-    st.success(diab_diagnosis)
+        st.success(diab_diagnosis)
 
 
 
@@ -147,8 +146,7 @@ if (selected == 'Heart Disease Prediction'):
           heart_diagnosis = 'The person is having heart disease'
         else:
            heart_diagnosis = 'The person does not have any heart disease'
-        
-    st.success(heart_diagnosis)
+        st.success(heart_diagnosis)
         
     
     
@@ -240,8 +238,7 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person has Parkinson's disease"
         else:
            parkinsons_diagnosis = "The person does not have Parkinson's disease"
-        
-    st.success(parkinsons_diagnosis)
+        st.success(parkinsons_diagnosis)
 
 
 
