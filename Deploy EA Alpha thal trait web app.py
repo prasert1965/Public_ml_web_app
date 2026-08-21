@@ -51,6 +51,7 @@ def EA_Alpha_thal_prediction(input_data):
    
 def main():
 
+    st.markdown(hide_style, unsafe_allow_html=True)
     # giving a title  
     st.title('Web for prediction Alpha Thalassemia carrier')   
     
